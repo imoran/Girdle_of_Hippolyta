@@ -4,11 +4,11 @@ import smtplib
 import os
 
 user = 'imoran@mail.ccsf.edu'
-password = os.environ['MY_PASSWORD']
+password = os.environ['MY_CCSF_PASS']
 
 to = ['isismoran93@gmail.com']
-subject = 'Hey, do you come here often?'
-body = '(;'
+subject = 'Hey, you'
+body = 'Yes you (;'
 
 email_text = """\
 From: %s
@@ -19,13 +19,12 @@ Subject: %s
 """ % (user, ", ".join(to), subject, body)
 
 try:
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.ehlo()
-    server.starttls()
-    server.login(user, password)
-    server.sendmail(user, to, email_text)
-    server.quit()
-
-    print 'Email sent!'
+	server = smtplib.SMTP('smtp.gmail.com', 587)
+	server.ehlo()
+	server.starttls()
+	server.login(user, password)
+	server.sendmail(user, to, email_text)
+	server.quit()
+	print 'Email sent!'
 except:
-    print 'Something went wrong...'
+	print 'Something went wrong...'
