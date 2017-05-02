@@ -3,7 +3,7 @@
 import smtplib
 import os
 
-user = 'imoran@mail.ccsf.edu'
+user = os.environ['MY_CCSF_ACCT']
 password = os.environ['MY_CCSF_PASS']
 
 to = ['isismoran93@gmail.com']
