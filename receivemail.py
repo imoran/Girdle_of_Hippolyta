@@ -3,7 +3,7 @@
 import imaplib
 import os
 
-user = 'isismoran93@gmail.com'
+user = os.environ['MY_GMAIL_ACCT']
 password = os.environ['MY_GMAIL_PASS']
 
 try:
